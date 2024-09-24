@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/Layout.astro';
+const title = "My Bucket List"
+const listofthings: string[] = ["Travel to Japan", "Learn to play the guitar", "Write a book", "Run a marathon", "See the Northern Lights"]
+---
+
+<Layout title="bucketlist" >
+    <header>
+      <main>
+      <h1>{title}</h1>
+      <p>{listofthings.map((b: string) => {
+        return b
+      })}</p>
+    </header>
+    </main>
+</Layout>
