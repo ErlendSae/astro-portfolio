@@ -4,16 +4,7 @@ import Projects from '../components/Projects.astro';
 ---
 
 <Layout title="Erlendo">
-	<main>
-		<svg
-			class="astro-a"
-			width="495"
-			height="623"
-			viewBox="0 0 495 623"
-			fill="none"
-			xmlns="http://www.w3.org/2000/svg"
-			aria-hidden="true"
-		>
+	<main class="relative flex flex-col items-center justify-center min-h-screen p-8 text-gray-100 font-poppins">
 			<path
 				fill-rule="evenodd"
 				clip-rule="evenodd"
@@ -28,18 +19,21 @@ import Projects from '../components/Projects.astro';
 					y2="622.479"
 					gradientUnits="userSpaceOnUse"
 				>
-					<stop stop-opacity="0.9"></stop>
-					<stop offset="1" stop-opacity="0.2"></stop>
+					<stop stop-color="#ffffff" stop-opacity="0.9"></stop>
+					<stop offset="1" stop-color="#ffffff" stop-opacity="0.2"></stop>
 				</linearGradient>
 			</defs>
-		</svg>
-		<h1 class="pt-24">Welcome to <span class="text-gradient">Erlendo</span></h1>
+		<h1 class="pt-24 text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-green-600">
+			Welcome to <span class="text-gradient">Erlendo</span>
+		</h1>
 		<Projects />
 	</main>
+	<script>
+      
+	</script>
 </Layout>
 
 <style>
-
 	.astro-a {
 		position: absolute;
 		top: -32px;
@@ -49,19 +43,10 @@ import Projects from '../components/Projects.astro';
 		height: auto;
 		z-index: -1;
 	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
+
 	.text-gradient {
-		background-image: var(--accent-gradient);
+		background-image: linear-gradient(90deg, #38b2ac, #48bb78);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
 	}
-
 </style>
